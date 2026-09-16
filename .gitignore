@@ -1,0 +1,9 @@
+node_modules
+.next/
+.env.local
+tsconfig.tsbuildinfo
+temporary screenshots/
+.claude/
+screenshot.mjs
+screenshot-portal.mjs
+.email-previews/

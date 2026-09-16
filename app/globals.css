@@ -1,0 +1,277 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ═════════════════════════════════════════════════════════════════════
+     DARK THEME (default) — Linear-style dark UI
+     ═════════════════════════════════════════════════════════════════════ */
+  :root,
+  .dark {
+    /* Backgrounds (solid surfaces) */
+    --bg-page:      #0d0d0d;
+    --bg-sidebar:   #111111;
+    --bg-card:      #161616;
+    --bg-input:     #1a1a1a;
+    --bg-elevated:  #1c1c1c;
+
+    /* Text (primary → faint) */
+    --text-primary:    #e8e8e8;
+    --text-secondary:  #d4d4d4;
+    --text-muted:      #8a8a8a;
+    --text-subtle:     #666666;
+    --text-faint:      #555555;
+    --text-fainter:    #444444;
+    --text-disabled:   #333333;
+
+    /* Borders (alpha) */
+    --border-subtle:  rgba(255, 255, 255, 0.06);
+    --border-default: rgba(255, 255, 255, 0.08);
+    --border-medium:  rgba(255, 255, 255, 0.10);
+    --border-hover:   rgba(255, 255, 255, 0.13);
+    --border-strong:  rgba(255, 255, 255, 0.16);
+
+    /* Hover backgrounds (alpha) */
+    --hover-subtle:   rgba(255, 255, 255, 0.03);
+    --hover-default:  rgba(255, 255, 255, 0.05);
+    --hover-strong:   rgba(255, 255, 255, 0.08);
+
+    /* Accent — same in both themes */
+    --accent:         #5e6ad2;
+    --accent-hover:   #6872e5;
+    --accent-muted:   rgba(94, 106, 210, 0.15);
+    --accent-ring:    rgba(94, 106, 210, 0.35);
+    --accent-border:  rgba(94, 106, 210, 0.25);
+
+    /* Status / priority (shared across themes — dots that work on both bgs) */
+    --status-todo:        #888888;
+    --status-in-progress: #5e6ad2;
+    --status-done:        #26c97f;
+    --priority-urgent:    #e5484d;
+    --priority-high:      #e79d13;
+    --priority-normal:    #5e6ad2;
+    --priority-low:       #8a8a8a;
+
+    /* Status tint backgrounds & borders — tuned for dark surfaces */
+    --tint-accent:        rgba(94, 106, 210, 0.12);
+    --tint-accent-strong: rgba(94, 106, 210, 0.18);
+    --tint-green:         rgba(38, 201, 127, 0.12);
+    --tint-green-border:  rgba(38, 201, 127, 0.22);
+    --tint-orange:        rgba(231, 157, 19, 0.12);
+    --tint-orange-border: rgba(231, 157, 19, 0.22);
+    --tint-red:           rgba(229, 72, 77, 0.10);
+    --tint-red-border:    rgba(229, 72, 77, 0.22);
+
+    /* Shadows (tuned for dark surfaces) */
+    --shadow-sm:    0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md:    0 4px 12px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-lg:    0 8px 32px rgba(0, 0, 0, 0.6), 0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-modal: 0 24px 64px rgba(0, 0, 0, 0.7), 0 4px 16px rgba(0, 0, 0, 0.5);
+
+    /* Scrollbar */
+    --scrollbar-thumb:       rgba(255, 255, 255, 0.10);
+    --scrollbar-thumb-hover: rgba(255, 255, 255, 0.18);
+
+    /* Decorative dot-pattern color (used via inline background-image) */
+    --dot-color: rgba(255, 255, 255, 1);
+
+    /* shadcn/ui tokens */
+    --background:          0 0% 5%;
+    --foreground:          0 0% 94%;
+    --card:                0 0% 8.6%;
+    --card-foreground:     0 0% 94%;
+    --popover:             0 0% 11%;
+    --popover-foreground:  0 0% 94%;
+    --primary:             234 44% 60%;
+    --primary-foreground:  0 0% 100%;
+    --secondary:           0 0% 11%;
+    --secondary-foreground: 0 0% 94%;
+    --muted:               0 0% 11%;
+    --muted-foreground:    0 0% 54%;
+    --destructive:         0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border:              0 0% 10%;
+    --input:               0 0% 10%;
+    --ring:                234 44% 60%;
+    --radius: 0.375rem;
+  }
+
+  /* ═════════════════════════════════════════════════════════════════════
+     LIGHT THEME
+     ═════════════════════════════════════════════════════════════════════ */
+  .light {
+    /* Backgrounds — #ffffff for primary surfaces, subtle gray for separation */
+    --bg-page:      #ffffff;
+    --bg-sidebar:   #f7f7f8;
+    --bg-card:      #ffffff;
+    --bg-input:     #f7f7f8;
+    --bg-elevated:  #ffffff;
+
+    /* Text — near-black → near-white */
+    --text-primary:    #0a0a0a;
+    --text-secondary:  #27272a;
+    --text-muted:      #52525b;
+    --text-subtle:     #71717a;
+    --text-faint:      #a1a1aa;
+    --text-fainter:    #c4c4c7;
+    --text-disabled:   #d4d4d8;
+
+    /* Borders (alpha over light) */
+    --border-subtle:  rgba(0, 0, 0, 0.05);
+    --border-default: rgba(0, 0, 0, 0.08);
+    --border-medium:  rgba(0, 0, 0, 0.10);
+    --border-hover:   rgba(0, 0, 0, 0.14);
+    --border-strong:  rgba(0, 0, 0, 0.18);
+
+    /* Hover backgrounds */
+    --hover-subtle:   rgba(0, 0, 0, 0.03);
+    --hover-default:  rgba(0, 0, 0, 0.05);
+    --hover-strong:   rgba(0, 0, 0, 0.08);
+
+    /* Accent unchanged */
+    --accent:         #5e6ad2;
+    --accent-hover:   #4f5ac0;
+    --accent-muted:   rgba(94, 106, 210, 0.10);
+    --accent-ring:    rgba(94, 106, 210, 0.30);
+    --accent-border:  rgba(94, 106, 210, 0.25);
+
+    /* Status colors unchanged */
+    --status-todo:        #71717a;
+    --status-in-progress: #5e6ad2;
+    --status-done:        #16a34a;
+    --priority-urgent:    #dc2626;
+    --priority-high:      #d97706;
+    --priority-normal:    #5e6ad2;
+    --priority-low:       #71717a;
+
+    --tint-accent:        rgba(94, 106, 210, 0.08);
+    --tint-accent-strong: rgba(94, 106, 210, 0.14);
+    --tint-green:         rgba(22, 163, 74, 0.10);
+    --tint-green-border:  rgba(22, 163, 74, 0.22);
+    --tint-orange:        rgba(217, 119, 6, 0.10);
+    --tint-orange-border: rgba(217, 119, 6, 0.22);
+    --tint-red:           rgba(220, 38, 38, 0.10);
+    --tint-red-border:    rgba(220, 38, 38, 0.22);
+
+    /* Shadows tuned for white */
+    --shadow-sm:    0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md:    0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-lg:    0 8px 24px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.05);
+    --shadow-modal: 0 16px 48px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    --scrollbar-thumb:       rgba(0, 0, 0, 0.15);
+    --scrollbar-thumb-hover: rgba(0, 0, 0, 0.25);
+
+    --dot-color: rgba(0, 0, 0, 1);
+
+    /* shadcn/ui light tokens */
+    --background:          0 0% 100%;
+    --foreground:          240 6% 10%;
+    --card:                0 0% 100%;
+    --card-foreground:     240 6% 10%;
+    --popover:             0 0% 100%;
+    --popover-foreground:  240 6% 10%;
+    --primary:             234 44% 60%;
+    --primary-foreground:  0 0% 100%;
+    --secondary:           240 5% 96%;
+    --secondary-foreground: 240 6% 10%;
+    --muted:               240 5% 96%;
+    --muted-foreground:    240 4% 46%;
+    --destructive:         0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border:              240 6% 90%;
+    --input:               240 6% 90%;
+    --ring:                234 44% 60%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border-default);
+  }
+  html {
+    @apply overflow-x-hidden;
+  }
+  body {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    font-family: 'Geist', 'Inter', system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @apply overflow-x-hidden;
+    transition: background-color 150ms ease, color 150ms ease;
+  }
+}
+
+/* ── Sidebar nav entrance animation ──────────────────────────────────── */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-6px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.nav-item {
+  animation: slideIn 200ms ease-out both;
+}
+.nav-item:nth-child(1) { animation-delay: 0ms; }
+.nav-item:nth-child(2) { animation-delay: 30ms; }
+.nav-item:nth-child(3) { animation-delay: 60ms; }
+.nav-item:nth-child(4) { animation-delay: 90ms; }
+.nav-item:nth-child(5) { animation-delay: 120ms; }
+.nav-item:nth-child(6) { animation-delay: 150ms; }
+.nav-item:nth-child(7) { animation-delay: 180ms; }
+.nav-item:nth-child(8) { animation-delay: 210ms; }
+
+/* ── Page entrance animations ────────────────────────────────────────── */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.animate-in {
+  animation: fade-in-up 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.animate-in-fast {
+  animation: fade-in 0.25s ease both;
+}
+.animate-scale-in {
+  animation: scale-in 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ── Global thin scrollbar ──────────────────────────────────────────── */
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 3px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) transparent;
+}
+
+/* Hide scrollbar while keeping scroll functionality */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+
+/* Legacy class — kept for backwards compat */
+.scrollbar-orchestra::-webkit-scrollbar { width: 6px; }
+.scrollbar-orchestra::-webkit-scrollbar-track { background: transparent; }
+.scrollbar-orchestra::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
+.scrollbar-orchestra::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
