@@ -2,7 +2,7 @@
 
 ## What it is
 
-Torva is a **multi-tenant project management tool with a built-in client portal**.
+Nexus is a **multi-tenant project management tool with a built-in client portal**.
 It replaces two tools at once: a task tracker (ClickUp / Linear) for the internal
 team, and a client-facing portal (GetOrchestra) for the people paying for the work.
 
