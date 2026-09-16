@@ -2,7 +2,7 @@
 
 ## What it is
 
-Nexus is a **multi-tenant project management tool with a built-in client portal**.
+Torva is a **multi-tenant project management tool with a built-in client portal**.
 It replaces two tools at once: a task tracker (ClickUp / Linear) for the internal
 team, and a client-facing portal (GetOrchestra) for the people paying for the work.
 
@@ -78,12 +78,6 @@ Every `lib/db` module has a matching `…ByMember(memberId)` query for this.
 | Email | Brevo (SMTP for Supabase auth mail, HTTP API for app mail) |
 | Hosting | Vercel |
 
-## Current status
-
-- Branch `main`, working tree clean, remote `git@github.com:ZamarMasood/nexus-app.git`
-- Latest commit: `157c8fe` — *"Add tags + per-project boards, confirm dialog, security fixes, form preloading"*
-- The three build phases named in `CLAUDE.md` (internal tasks → client portal → CRM/invoices)
-  are all present in the code. Invoicing exists but has no payment provider wired up.
 
 ## Known gaps and stale items
 
