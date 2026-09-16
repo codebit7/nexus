@@ -1,4 +1,4 @@
-# Torva App — Documentation
+# Nexus App — Documentation
 
 Full documentation for the Torva project management + client portal app.
 
@@ -27,7 +27,7 @@ Full documentation for the Torva project management + client portal app.
 
 ## The one-paragraph version
 
-Torva is a multi-tenant SaaS for agencies: one workspace per company, isolated by
+Nexusis a multi-tenant SaaS for agencies: one workspace per company, isolated by
 `org_id`. Inside a workspace, a team manages clients, projects, tasks (kanban),
 team members, and invoices. Each client also gets a read-mostly portal at
 `/portal/*` where they see only their own tasks, files, and invoices. Built on
