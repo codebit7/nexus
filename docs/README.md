@@ -1,6 +1,6 @@
 # Nexus App — Documentation
 
-Full documentation for the Torva project management + client portal app.
+Full documentation for the nexus project management + client portal app.
 
 
 
